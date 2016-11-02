@@ -1,6 +1,6 @@
 #AGI
 
-This document contains the approach I am taking towards building an AGI system. I do not have experience in this field, but I am spending my time on it because I want to scratch an itch.
+This document contains the approach I am taking towards building an AGI system for my reference. I do not have experience in this field, but I am spending my time on it because I want to scratch an itch.
 
 ###Basic approach<sup>[1]</sup>:
 1. Build a system that can solve a game by learning the rules and optimizing for it. The system should be built on proper abstractions and not tied down to the details of the game.
@@ -15,18 +15,25 @@ This document contains the approach I am taking towards building an AGI system. 
 1. Brain: 
     * Stores patterns and associated reactions.
     * Match input to pattern and execute.
-
 2. Meta-brain / Consciousness:
     * Measures output quality and biases stored patters accordingly.
     * Hunts for new patterns.
     * Has context of overall system health and tries to optimize for it.
     * Works in the background.
+3. World: 
+    * I'm very unclear about this. The idea is that there if the meta-brain is trying to optimize for it's own health, there has to be a system that affects the health based on the input and output of the brain.
+
+
+###Current status:
+* Modeling the system so that v1 is not a disaster.
+* Use it on this [game](http://cda.neelborooah.com).
+* Build it using a client-server architecture.
+* Probably use neural networks. I'm reading up on if this is a feasible option. Checking Deep Reinforcement Learning<sup>[2]</sup>.  
 
 ###Questions:
 * How are ideas generated?
 * How does a machine build abstractions?
 
-
 ###Notes:
 1. Inspired by [DeepMind](https://deepmind.com/).
-
+2. [Deepmind Article](https://deepmind.com/blog/deep-reinforcement-learning/)
