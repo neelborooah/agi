@@ -26,13 +26,13 @@ This document contains the approach I am taking towards building an AGI system f
 ###Architectural components:
 1. Client:
     * Connected to a single server, has a range of inputs and actions it can perform.
-    * Periodically sends its state and associated meta-data to the server.
+    * Periodically sends its state and associated meta-data (input, actions and brain version used in the time window) to the server.
     * Receives the brain from the server, which is a plug-and-play module.
     * Client can execute even if connection to server is lost, if it has resolved initial dependancies.
 2. Server:
     * Maintains connections with all clients.
     * Stores all info sent by the client.
-    * Runs algo against these state to compare performance and modify the executable brain.<sup>[2]</sup> 
+    * Runs algo against these states to compare performance and modify the executable brain.<sup>[2]</sup> 
     * Pushes updated brain to the clients.
 
 ###Current status:
